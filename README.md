@@ -18,7 +18,7 @@ It provides more accurate check than L4 / TCP / TCP-half-open monitor.
    command="ls -l $dir_to_check | wc -l" # linux command to check the directory. 
 
 
-2. AFTER changing above parameters, then upload the script into F5 though GUI. 
+2. AFTER changing above parameters, upload this script to BIG-IP though GUI. 
    (if you are using windows, please do DOS to UNIX conversion make it work) 
    you can upload it via system -> File Management -> External Monitor Program File List 
           
@@ -26,6 +26,6 @@ It provides more accurate check than L4 / TCP / TCP-half-open monitor.
    Set interval to 5 seconds, dan timeout 16 seconds.
    You customize it, the rule of thumb is "Timeout = interval * 3 + 1"
     
-4. Assign the newly created monitor into SSH pool (Local traffic -> pools)
+4. Assign your newly created monitor into SSH pool (Local traffic -> pools)
 
 
