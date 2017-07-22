@@ -5,7 +5,7 @@ It provides more accurate check than L4 / TCP / TCP-half-open monitor.
 
 
 
-################################################################################################
+######################################################################################
 1. You need to modify several parameters before you can use it.
 
    user="testf5"   # SSH username that is eligible to do monitoring and to access $dir_to_check directory. 
@@ -23,3 +23,5 @@ It provides more accurate check than L4 / TCP / TCP-half-open monitor.
    You customize it, the rule of thumb is "Timeout = interval * 3 + 1"
     
 4. Assign the newly created monitor into SSH pool (Local traffic -> pools)
+
+
