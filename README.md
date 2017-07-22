@@ -18,14 +18,14 @@ It provides more accurate check than L4 / TCP / TCP-half-open monitor.
    command="ls -l $dir_to_check | wc -l" # linux command to check the directory. 
 
 
-2. AFTER changing above parameters, upload this script to BIG-IP though GUI. 
+2. AFTER changing above parameters, upload this script into BIG-IP through GUI. 
    (if you are using windows, please do DOS to UNIX conversion make it work) 
    you can upload it via system -> File Management -> External Monitor Program File List 
           
-3. Create new monitor (Local traffic -> Monitor) , type “external”. 
+3. Create new monitor (Local traffic -> Monitor) , type “external”, choose the uploaded script.
    Set interval to 5 seconds, dan timeout 16 seconds.
-   You customize it, the rule of thumb is "Timeout = interval * 3 + 1"
+   You can customize it tho, the rule of thumb is "Timeout = interval * 3 + 1"
     
-4. Assign your newly created monitor into SSH pool (Local traffic -> pools)
+4. Assign your newly modified monitor to SSH pool monitor (Local traffic -> pools)
 
 
