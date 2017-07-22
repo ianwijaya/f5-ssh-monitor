@@ -9,8 +9,12 @@ It provides more accurate check than L4 / TCP / TCP-half-open monitor.
 1. You need to modify several parameters before you can use it.
 
    user="testf5"   # SSH username that is eligible to do monitoring and to access $dir_to_check directory. 
-   cert="/home/admin/my-openssh-key" # you need to generate new ssh key (using ssh-keygen command or puttygen), and upload the PUBLIC key to F5 under this defined directory .
+   
+   cert="/home/admin/my-openssh-key" # you need to generate new ssh key (using ssh-keygen command or puttygen), and upload the PUBLIC key to F5 under this defined directory.
+ 
+ 
    dir_to_check="~" # Directory to check, which "user" has access to. 
+   
    command="ls -l $dir_to_check | wc -l" # linux command to check the directory. 
 
 
