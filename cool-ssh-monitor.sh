@@ -1,6 +1,6 @@
 #!/bin/bash
 IP=`echo $1 | sed 's/::ffff://'`
-user="testf5" # change to test user 
+user="testf5" # change to test user
 cert="/home/admin/my-openssh-key" #change to ssh public key location
 dir_to_check="~"
 command="ls -l $dir_to_check | wc -l"
@@ -14,13 +14,14 @@ then
 fi
 echo "$$" > $pidfile
 
-#start the test 
-#disable GSSAPIauthentication for minimal check duration, change bash 
+#start the test
+#disable GSSAPIauthentication for minimal check duration, change bash
 test1=`ssh -4 -o "GSSAPIAuthentication=no" -i $cert -l $user $IP $command 2> /dev/null`
-if [[ ${test1} =~ ^[0-9]+$ ]]; then  
+if [[ ${test1} =~ ^[0-9]+$ ]]; then
   if [[ ${test1} -gt 0 ]]; then
     echo "UP"
   fi
 fi
 
 rm -f "${pidfile}"
+#test

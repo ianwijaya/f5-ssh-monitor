@@ -19,7 +19,7 @@ It provides more accurate check than L4 / TCP / TCP-half-open monitor.
 
 
 2. AFTER changing above parameters, upload this script into BIG-IP through GUI. 
-   (if you are using windows, please do DOS to UNIX conversion make it work) 
+   (if you are using windows, please do DOS to UNIX conversion to make it work) 
    you can upload it via system -> File Management -> External Monitor Program File List 
           
 3. Create new monitor (Local traffic -> Monitor) , type “external”, choose the uploaded script.
